@@ -28,3 +28,16 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
 registerRoute();
+
+// Defines the callback function that will filter the requests we want to cache 
+({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+new StaleWhileRevalidate({
+  // Name of the cache storage.
+  cacheName: 'asset-cache',
+  plugins: [
+  
+    new CacheableResponsePlugin({
+      statuses: [0, 200],
+    }),
+  ],
+});
