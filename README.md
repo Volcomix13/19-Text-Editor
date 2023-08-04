@@ -19,6 +19,7 @@ To get started, in your terminal run command npm install. Once this is complete,
 
 ## Usage
 Click on the link provided below to initiate the application.
+Heroku link:https://text-editor-13-7121f24a1e25.herokuapp.com/
 
 Repo link: https://github.com/Volcomix13/19-Text-Editor
 
